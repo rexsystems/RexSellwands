@@ -8,9 +8,12 @@ import me.rexsystems.rexSellwands.sell.SaleService;
 import me.rexsystems.rexSellwands.wand.CooldownBook;
 import me.rexsystems.rexSellwands.wand.WandItems;
 import org.bukkit.command.PluginCommand;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class RexSellwands extends JavaPlugin {
+
+    private static final int BSTATS_PLUGIN_ID = 35267;
 
     private PluginConfig pluginConfig;
     private CooldownBook cooldowns;
@@ -36,6 +39,7 @@ public final class RexSellwands extends JavaPlugin {
             pluginCommand.setTabCompleter(command);
         }
 
+        new Metrics(this, BSTATS_PLUGIN_ID);
         getLogger().info("RexSellwands enabled.");
     }
 
