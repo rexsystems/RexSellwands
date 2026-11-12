@@ -1,0 +1,51 @@
+# RexSellwands configuration
+# Messages accept MiniMessage, legacy & codes, &#RRGGBB, and #RRGGBB.
+# Inserted values ({player}, {price}, {items}) are literal. Color belongs in the template.
+# wands.yml and prices.yml are created once. Reload does not overwrite them.
+
+config-version: 1
+
+settings:
+  # false: a shulker box item sells at the shulker material price. Items inside are not priced.
+  # true: items inside a shulker box item are priced and removed. The box itself stays.
+  sell-shulker-contents: false
+  # Seconds a sale hologram stays above the container. 0 disables holograms.
+  hologram-seconds: 3
+  # DecimalFormat pattern, US grouping. Used for {price}.
+  money-format: "#,##0.##"
+
+currency:
+  # vault uses Vault. placeholder runs the commands below.
+  # {player} and {amount} are replaced. {amount} is a plain number, such as 12.5.
+  type: vault
+  balance-placeholder: "%vault_eco_balance%"
+  give-command: "eco give {player} {amount}"
+  take-command: "eco take {player} {amount}"
+
+messages:
+  prefix: "<gray>[<#f75634>RexSellwands<gray>] "
+  no-permission: "{prefix}<red>You do not have permission to do that."
+  reload: "{prefix}<green>RexSellwands reloaded."
+  give-usage: "{prefix}<gray>Usage: <white>/rexsellwands give <player> <wand> [amount]"
+  give: "{prefix}<gray>Gave <white>{amount} {wand} <gray>to <white>{player}<gray>."
+  received: "{prefix}<gray>You received <white>{amount} {wand}<gray>."
+  unknown-wand: "{prefix}<red>There is no wand named <white>{wand}<red>."
+  unknown-player: "{prefix}<red><white>{player} <red>is not online."
+  invalid-amount: "{prefix}<red>Amount must be a whole number from 1 to 64."
+  list-header: "{prefix}<white>Wands"
+  list-line: "<gray>{wand} <dark_gray>- <white>{material}<gray>, multiplier <white>{multiplier}<gray>, uses <white>{uses}"
+  list-empty: "{prefix}<gray>No wands are configured."
+  inventory-full: "{prefix}<gray>Your inventory was full. The rest was dropped at your feet."
+  preview: "{prefix}<gray>Price: <white>{price}<gray>."
+  nothing-to-sell: "{prefix}<gray>Nothing in that container has a price."
+  sold: "{prefix}<gray>Sold for <white>{price}<gray>."
+  unsellable: "{prefix}<gray>No price for: <white>{items}<gray>."
+  cooldown: "{prefix}<red>That wand is ready in <white>{seconds}s<red>."
+  deposit-failed: "{prefix}<red>Payment failed. The items are back in the container."
+  wand-broke: "{prefix}<gray>That wand has no uses left."
+  help-header: "{prefix}<white>RexSellwands"
+  help:
+    - "<gray>/rexsellwands help <dark_gray>- <white>Show this help"
+    - "<gray>/rexsellwands give <player> <wand> [amount] <dark_gray>- <white>Give a wand"
+    - "<gray>/rexsellwands list <dark_gray>- <white>List wand ids"
+    - "<gray>/rexsellwands reload <dark_gray>- <white>Reload config.yml, wands.yml, and prices.yml"

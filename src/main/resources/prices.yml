@@ -1,0 +1,54 @@
+# Material names match the Bukkit enum, for example DIAMOND or OAK_LOG.
+# A missing material is not sold. It stays in the container and is listed as unsellable.
+# A blacklisted material stays in the container and is not listed as unsellable.
+# Colored shulker boxes use their own names, such as WHITE_SHULKER_BOX.
+# This file is written only when it is missing. Reload will not replace your edits.
+
+prices:
+  DIAMOND: 100
+  DIAMOND_BLOCK: 900
+  EMERALD: 80
+  EMERALD_BLOCK: 720
+  NETHERITE_INGOT: 500
+  ANCIENT_DEBRIS: 250
+  GOLD_INGOT: 25
+  GOLD_BLOCK: 225
+  IRON_INGOT: 10
+  IRON_BLOCK: 90
+  COPPER_INGOT: 3
+  COAL: 2
+  LAPIS_LAZULI: 4
+  REDSTONE: 2
+  QUARTZ: 3
+  AMETHYST_SHARD: 5
+  OAK_LOG: 1
+  COBBLESTONE: 0.5
+  WHEAT: 1
+  ROTTEN_FLESH: 0.5
+  SHULKER_BOX: 40
+  WHITE_SHULKER_BOX: 40
+  ORANGE_SHULKER_BOX: 40
+  MAGENTA_SHULKER_BOX: 40
+  LIGHT_BLUE_SHULKER_BOX: 40
+  YELLOW_SHULKER_BOX: 40
+  LIME_SHULKER_BOX: 40
+  PINK_SHULKER_BOX: 40
+  GRAY_SHULKER_BOX: 40
+  LIGHT_GRAY_SHULKER_BOX: 40
+  CYAN_SHULKER_BOX: 40
+  PURPLE_SHULKER_BOX: 40
+  BLUE_SHULKER_BOX: 40
+  BROWN_SHULKER_BOX: 40
+  GREEN_SHULKER_BOX: 40
+  RED_SHULKER_BOX: 40
+  BLACK_SHULKER_BOX: 40
+
+blacklist:
+  - BEDROCK
+  - BARRIER
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - STRUCTURE_BLOCK
+  - JIGSAW
+  - LIGHT
