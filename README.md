@@ -48,3 +48,7 @@ Aliases: `/rsw`, `/sellwand`
 The pages in [docs/](docs/index.md) drop into a Starlight site at `src/content/docs/rexsellwands/`. Paste `docs/sidebar.mjs` into the site sidebar.
 
 Full docs: [https://rexsystems.me/docs/rexsellwands](https://rexsystems.me/docs/rexsellwands)
+
+## License
+
+Licensed under the [GNU Affero General Public License v3.0](LICENSE).
