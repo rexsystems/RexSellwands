@@ -36,4 +36,4 @@ Aliases: `/rsw`, `/sellwand`
 | `rexsellwands.reload` | op | Reload the plugin |
 | `rexsellwands.multiplier.<wand>.<number>` | none | Sale multiplier for that wand. The highest number wins |
 
-Documentation: https://rexsystems.me/docs/rexsellwands
+Documentation: https://docs.rexsystems.me/rexsellwands/
